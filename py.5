@@ -1,0 +1,59 @@
+
+
+ Assignment 1: Design Your Own Class — Superhero Universe
+class Superhero:
+    def __init__(self, name, power, origin):
+        self._name = name              # Encapsulated attribute
+        self._power = power            # Encapsulated attribute
+        self._origin = origin          # Encapsulated attribute
+
+    def introduce(self):
+        print(f"I am {self._name} from {self._origin}, and I wield the power of {self._power}!")
+
+    def use_power(self):
+        print(f"{self._name} uses {self._power}!")
+
+class FlyingHero(Superhero):
+    def use_power(self):
+        print(f"{self._name} soars through the skies with {self._power}!")
+
+class SpeedHero(Superhero):
+    def use_power(self):
+        print(f"{self._name} blazes past with lightning speed using {self._power}!")
+
+hero1 = FlyingHero("Skyblade", "Flight", "Cloud City")
+hero2 = SpeedHero("Flashfire", "Super Speed", "Metroville")
+
+hero1.introduce()
+hero1.use_power()
+
+hero2.introduce()
+hero2.use_power()
+
+
+
+Activity 2: Polymorphism Challenge — Vehicles in Motion
+class Vehicle:
+    def move(self):
+        print("Vehicle is moving...")
+
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+class Boat(Vehicle):
+    def move(self):
+        print("Sailing 🚤")
+
+vehicles = [Car(), Plane(), Boat()]
+
+for v in vehicles:
+    v.move()
+
+
+
+
